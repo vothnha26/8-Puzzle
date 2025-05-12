@@ -21,6 +21,18 @@
 
 2.1. Các thuật toán Tìm kiếm không có thông tin:
 
-   ![image](https://github.com/user-attachments/assets/bc0a5c93-cc5e-43f4-bd8e-1415e4f091d3)
+   ![image](https://github.com/user-attachments/assets/213bafae-0edb-4769-86d8-4487cef898dc)
 
+
+  Dựa vào hình ảnh có thể nhận xét như sau:
+
+  Thuật toán BFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu)
+
+  Thuật toán DFS: không đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng sẽ đảm bảo về không gian bộ nhớ (duyệt theo độ sâu)
+
+  Thuật toán UCS: đảm bảo tìm ra giải pháp tối ưu (sử dụng bfs), chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu) nhưng có thể tìm thấy lời giải nhanh hơn so với bfs
+
+  Thuật toán IDDFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) và tối ưu về không gian bộ nhớ (giống DFS), nhưng có thể chậm hơn BFS/UCS một chút do phải duyệt lại các nút ở độ sâu nông hơn.
+
+  Nhìn chung, đối với bài toán 8-puzzle, khi yêu cầu giải pháp tối ưu và đối mặt với giới hạn bộ nhớ, IDDFS thường là lựa chọn cân bằng và hiệu quả nhất trong nhóm thuật toán không thông tin này, mặc dù BFS/UCS có thể nhanh hơn nếu bộ nhớ không phải là vấn đề. DFS chỉ phù hợp khi không yêu cầu tính tối ưu.
    
