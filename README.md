@@ -26,13 +26,22 @@
 
   Dựa vào hình ảnh có thể nhận xét như sau:
 
-  Thuật toán BFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu)
+    Thuật toán BFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu)
 
-  Thuật toán DFS: không đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng sẽ đảm bảo về không gian bộ nhớ (duyệt theo độ sâu)
+    Thuật toán DFS: không đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) nhưng sẽ đảm bảo về không gian bộ nhớ (duyệt theo độ sâu)
 
-  Thuật toán UCS: đảm bảo tìm ra giải pháp tối ưu (sử dụng bfs), chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu) nhưng có thể tìm thấy lời giải nhanh hơn so với bfs
+    Thuật toán UCS: đảm bảo tìm ra giải pháp tối ưu (sử dụng bfs), chi phí về không gian bộ nhớ sẽ lớn (do mỗi lần sẽ duyệt theo độ sâu) nhưng có thể tìm thấy lời giải nhanh hơn so với bfs
 
-  Thuật toán IDDFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) và tối ưu về không gian bộ nhớ (giống DFS), nhưng có thể chậm hơn BFS/UCS một chút do phải duyệt lại các nút ở độ sâu nông hơn.
+    Thuật toán IDDFS: đảm bảo tìm ra giải pháp tối ưu (ngắn nhất) và tối ưu về không gian bộ nhớ (giống DFS), nhưng có thể chậm hơn BFS/UCS một chút do phải duyệt lại các nút ở độ sâu nông hơn.
 
   Nhìn chung, đối với bài toán 8-puzzle, khi yêu cầu giải pháp tối ưu và đối mặt với giới hạn bộ nhớ, IDDFS thường là lựa chọn cân bằng và hiệu quả nhất trong nhóm thuật toán không thông tin này, mặc dù BFS/UCS có thể nhanh hơn nếu bộ nhớ không phải là vấn đề. DFS chỉ phù hợp khi không yêu cầu tính tối ưu.
    
+2.2. Các thuật toán Tìm kiếm có thông tin:
+
+  ![image](https://github.com/user-attachments/assets/d34409fc-2974-457e-bedd-c4f04f38f0bc)
+
+    Thuật toán Greedy Search: Thường nhanh tìm ra giải pháp nhưng không đảm bảo tối ưu do chỉ dựa vào heuristic h(n) (ước lượng chi phí tới đích: số ô sai).
+  
+    Thuật toán A*: Đảm bảo giải pháp tối ưu (với heuristic admissible) và hiệu quả về số nút duyệt hơn tìm kiếm không thông tin, nhưng yêu cầu bộ nhớ rất lớn (do sử dụng cấu trúc của thuật toán BFS).
+  
+    Thuật toán IDA*: Đảm bảo giải pháp tối ưu (giống A*) và rất hiệu quả về bộ nhớ, nhưng có thể chậm hơn A* một chút do phải duyệt lại các nút.
